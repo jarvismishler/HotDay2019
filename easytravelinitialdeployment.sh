@@ -41,7 +41,7 @@ then
         update-rc.d cron defaults
 fi
 
-if [ -f "dynatrace-easytravel-linux-x86_64.jar" ]
+if [ -f "/opt/dynatrace-easytravel-linux-x86_64.jar" ]
 then
         echo "EasyTravel install file found... removing..."
         rm /opt/dynatrace-easytravel-linux-x86_64.jar
@@ -57,6 +57,13 @@ cd /opt/easytravel-2.0.0-x64/resources
 sed -i 's/apmServerDefault=Classic/apmServerDefault=APM/' easyTravelConfig.properties
 sed -i 's/config.apacheWebServerBackendPort=8091/config.apacheWebServerBackendPort=8094/' easyTravelConfig.properties
 sed -i 's/config.backendPort=8091/config.backendPort=8094/' easyTravelConfig.properties
+sed -i 's/config.apacheWebServerEnvArgs=/config.apacheWebServerEnvArgs=DT_CUSTOM_PROP=Application=EasyTravel TIER=ApacheFrontend/' easyTravelConfig.properties
+sed -i 's/config.creditCardAuthorizationEnvArgs=DT_WAIT=5,RUXIT_WAIT=5/config.creditCardAuthorizationEnvArgs=DT_WAIT=5,RUXIT_WAIT=5,DT_CUSTOM_PROP=Application=EasyTravel TIER=CCAuth/' easyTravelConfig.properties
+sed -i 's/config.paymentBackendEnvArgs=DT_WAIT=5,RUXIT_WAIT=5,COR_ENABLE_PROFILING=0x1/config.paymentBackendEnvArgs=DT_WAIT=5,RUXIT_WAIT=5,COR_ENABLE_PROFILING=0x1,DT_CUSTOM_PROP=Application=EasyTravel TIER=paymentBackend/' easyTravelConfig.properties
+sed -i 's/config.b2bFrontendEnvArgs=DT_WAIT=5,RUXIT_WAIT=5,COR_ENABLE_PROFILING=0x1/config.b2bFrontendEnvArgs=DT_WAIT=5,RUXIT_WAIT=5,COR_ENABLE_PROFILING=0x1,DT_CUSTOM_PROP=Application=EasyTravel TIER=b2bFrontend/' easyTravelConfig.properties
+sed -i 's/config.frontendJavaopts=-Xmx160m/config.frontendJavaopts=-Xmx160m-DT_CUSTOM_PROP=Application=EasyTravel TIER=CustomerFrontend/' easyTravelConfig.properties
+sed -i 's/config.backendJavaopts=-Xmx64m,-DentityExpansionLimit=500000/config.backendJavaopts=-Xmx64m,-DentityExpansionLimit=500000-DT_CUSTOM_PROP=Application=EasyTravel TIER=BusinessBackend/' easyTravelConfig.properties
+sed -i 's/config.thirdpartyJavaopts=-Xmx32m/config.thirdpartyJavaopts=-Xmx32m-DT_CUSTOM_PROP=Application=EasyTravel TIER=ThirdParty/' easyTravelConfig.properties
 
 #Add a 1 minute to the startup of EasyTravel
 cd /opt/easytravel-2.0.0-x64
