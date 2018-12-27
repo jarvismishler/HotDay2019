@@ -1,0 +1,42 @@
+Started by user [8mha:////4Oh1KoZAjZVRdvBsUuACbEAxcemgBgNTIjtrCCOIUj0+AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZu/dLi1CL9xJTczDwA+rnvwMAAAAA=[0mNathan Kunz
+Building in workspace /var/lib/jenkins/workspace/EasyTravel Deployment
+[EasyTravel Deployment] $ /bin/sh -xe /tmp/jenkins4647606019233492098.sh
++ curl http://52.32.106.158:8094/services/ConfigurationService/getEnabledPluginNames
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   441    0   441    0     0  24500      0 --:--:-- --:--:-- --:--:-- 24500
+<ns:getEnabledPluginNamesResponse xmlns:ns="http://webservice.business.easytravel.dynatrace.com"><ns:return>DatabaseCleanup</ns:return><ns:return>DummyNativeApplication.NET</ns:return><ns:return>DummyPaymentService</ns:return><ns:return>SocketNativeApplication</ns:return><ns:return>ThirdPartyAdvertisements</ns:return><ns:return>ThirdPartyContent</ns:return><ns:return>UseFinanceServiceWCF.NET</ns:return></ns:getEnabledPluginNamesResponse>+ echo BUILD_NUMBER :: 14
+BUILD_NUMBER :: 14
++ echo BUILD_ID :: 14
+BUILD_ID :: 14
++ echo BUILD_DISPLAY_NAME :: #14
+BUILD_DISPLAY_NAME :: #14
++ echo JOB_NAME :: EasyTravel Deployment
+JOB_NAME :: EasyTravel Deployment
++ echo JOB_BASE_NAME :: EasyTravel Deployment
+JOB_BASE_NAME :: EasyTravel Deployment
++ echo BUILD_TAG :: jenkins-EasyTravel Deployment-14
+BUILD_TAG :: jenkins-EasyTravel Deployment-14
++ echo EXECUTOR_NUMBER :: 1
+EXECUTOR_NUMBER :: 1
++ echo NODE_NAME :: master
+NODE_NAME :: master
++ echo NODE_LABELS :: master
+NODE_LABELS :: master
++ echo WORKSPACE :: /var/lib/jenkins/workspace/EasyTravel Deployment
+WORKSPACE :: /var/lib/jenkins/workspace/EasyTravel Deployment
++ echo JENKINS_HOME :: /var/lib/jenkins
+JENKINS_HOME :: /var/lib/jenkins
++ echo JENKINS_URL :: http://52.25.18.37:8080/
+JENKINS_URL :: http://52.25.18.37:8080/
++ echo BUILD_URL ::http://52.25.18.37:8080/job/EasyTravel%20Deployment/14/
+BUILD_URL ::http://52.25.18.37:8080/job/EasyTravel%20Deployment/14/
++ echo JOB_URL :: http://52.25.18.37:8080/job/EasyTravel%20Deployment/
+JOB_URL :: http://52.25.18.37:8080/job/EasyTravel%20Deployment/
++ echo EasyTravelHOST :: 52.32.106.158
+EasyTravelHOST :: 52.32.106.158
+SSH: Connecting from host [ip-172-31-17-200]
+SSH: Connecting with configuration [EasyTravel Remote] ...
+ERROR: Exception when publishing, exception message [Failed to connect and initialize SSH connection. Message: [Failed to connect session for config [EasyTravel Remote]. Message [Auth fail]]]
+Build step 'Send files or execute commands over SSH' changed build result to UNSTABLE
+Finished: UNSTABLE

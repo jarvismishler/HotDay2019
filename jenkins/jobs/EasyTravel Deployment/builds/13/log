@@ -1,0 +1,46 @@
+Started by user [8mha:////4Oh1KoZAjZVRdvBsUuACbEAxcemgBgNTIjtrCCOIUj0+AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZu/dLi1CL9xJTczDwA+rnvwMAAAAA=[0mNathan Kunz
+Building in workspace /var/lib/jenkins/workspace/EasyTravel Deployment
+[EasyTravel Deployment] $ /bin/sh -xe /tmp/jenkins835667089470942147.sh
++ curl http://52.32.106.158:8094/services/ConfigurationService/getEnabledPluginNames
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   441    0   441    0     0   430k      0 --:--:-- --:--:-- --:--:--  430k
+<ns:getEnabledPluginNamesResponse xmlns:ns="http://webservice.business.easytravel.dynatrace.com"><ns:return>DatabaseCleanup</ns:return><ns:return>DummyNativeApplication.NET</ns:return><ns:return>DummyPaymentService</ns:return><ns:return>SocketNativeApplication</ns:return><ns:return>ThirdPartyAdvertisements</ns:return><ns:return>ThirdPartyContent</ns:return><ns:return>UseFinanceServiceWCF.NET</ns:return></ns:getEnabledPluginNamesResponse>+ echo BUILD_NUMBER :: 13
+BUILD_NUMBER :: 13
++ echo BUILD_ID :: 13
+BUILD_ID :: 13
++ echo BUILD_DISPLAY_NAME :: #13
+BUILD_DISPLAY_NAME :: #13
++ echo JOB_NAME :: EasyTravel Deployment
+JOB_NAME :: EasyTravel Deployment
++ echo JOB_BASE_NAME :: EasyTravel Deployment
+JOB_BASE_NAME :: EasyTravel Deployment
++ echo BUILD_TAG :: jenkins-EasyTravel Deployment-13
+BUILD_TAG :: jenkins-EasyTravel Deployment-13
++ echo EXECUTOR_NUMBER :: 1
+EXECUTOR_NUMBER :: 1
++ echo NODE_NAME :: master
+NODE_NAME :: master
++ echo NODE_LABELS :: master
+NODE_LABELS :: master
++ echo WORKSPACE :: /var/lib/jenkins/workspace/EasyTravel Deployment
+WORKSPACE :: /var/lib/jenkins/workspace/EasyTravel Deployment
++ echo JENKINS_HOME :: /var/lib/jenkins
+JENKINS_HOME :: /var/lib/jenkins
++ echo JENKINS_URL :: http://52.25.18.37:8080/
+JENKINS_URL :: http://52.25.18.37:8080/
++ echo BUILD_URL ::http://52.25.18.37:8080/job/EasyTravel%20Deployment/13/
+BUILD_URL ::http://52.25.18.37:8080/job/EasyTravel%20Deployment/13/
++ echo JOB_URL :: http://52.25.18.37:8080/job/EasyTravel%20Deployment/
+JOB_URL :: http://52.25.18.37:8080/job/EasyTravel%20Deployment/
++ echo EasyTravelHOST :: 52.32.106.158
+EasyTravelHOST :: 52.32.106.158
+SSH: Connecting from host [ip-172-31-17-200]
+SSH: Connecting with configuration [EasyTravel Remote] ...
+SSH: EXEC: STDOUT/STDERR from command [ps -a] ...
+  PID TTY          TIME CMD
+SSH: EXEC: completed after 200 ms
+SSH: Disconnecting configuration [EasyTravel Remote] ...
+ERROR: Exception when publishing, exception message [Exec exit status not zero. Status [1]]
+Build step 'Send build artifacts over SSH' changed build result to UNSTABLE
+Finished: UNSTABLE

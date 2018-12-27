@@ -1,0 +1,17 @@
+Started by user [8mha:////4Oh1KoZAjZVRdvBsUuACbEAxcemgBgNTIjtrCCOIUj0+AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZu/dLi1CL9xJTczDwA+rnvwMAAAAA=[0mNathan Kunz
+Building in workspace /var/lib/jenkins/workspace/Install OneAgent
+SSH: Connecting from host [ip-172-31-17-200]
+SSH: Connecting with configuration [EasyTravel Remote] ...
+SSH: EXEC: STDOUT/STDERR from command [cd /opt
+wget  -O Dynatrace-OneAgent-Linux-1.157.210.sh "https://naz40386.sprint.dynatracelabs.com/api/v1/deployment/installer/agent/unix/default/latest?Api-Token==f96zJQNzRZqu1Fv8VUMXN&arch=x86&flavor=default"] ...
+--2018-12-22 23:30:02--  https://naz40386.sprint.dynatracelabs.com/api/v1/deployment/installer/agent/unix/default/latest?Api-Token==f96zJQNzRZqu1Fv8VUMXN&arch=x86&flavor=default
+Resolving naz40386.sprint.dynatracelabs.com (naz40386.sprint.dynatracelabs.com)... 34.212.185.158, 52.40.227.72
+Connecting to naz40386.sprint.dynatracelabs.com (naz40386.sprint.dynatracelabs.com)|34.212.185.158|:443... connected.
+HTTP request sent, awaiting response... 401 Unauthorized
+
+Username/Password Authentication Failed.
+SSH: EXEC: completed after 201 ms
+SSH: Disconnecting configuration [EasyTravel Remote] ...
+ERROR: Exception when publishing, exception message [Exec exit status not zero. Status [6]]
+Build step 'Send files or execute commands over SSH' changed build result to UNSTABLE
+Finished: UNSTABLE

@@ -1,0 +1,51 @@
+Started by user [8mha:////4Oh1KoZAjZVRdvBsUuACbEAxcemgBgNTIjtrCCOIUj0+AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZu/dLi1CL9xJTczDwA+rnvwMAAAAA=[0mNathan Kunz
+Building in workspace /var/lib/jenkins/workspace/EasyTravel Deployment
+[EasyTravel Deployment] $ /bin/sh -xe /tmp/jenkins6627678880986119533.sh
++ curl http://52.32.106.158:8094/services/ConfigurationService/getEnabledPluginNames
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   441    0   441    0     0   430k      0 --:--:-- --:--:-- --:--:--  430k
+<ns:getEnabledPluginNamesResponse xmlns:ns="http://webservice.business.easytravel.dynatrace.com"><ns:return>DatabaseCleanup</ns:return><ns:return>DummyNativeApplication.NET</ns:return><ns:return>DummyPaymentService</ns:return><ns:return>SocketNativeApplication</ns:return><ns:return>ThirdPartyAdvertisements</ns:return><ns:return>ThirdPartyContent</ns:return><ns:return>UseFinanceServiceWCF.NET</ns:return></ns:getEnabledPluginNamesResponse>[SSH] commands:
+EasyTravelHOST="`52.32.106.158"
+JOB_URL="http://52.25.18.37:8080/job/EasyTravel%20Deployment/"
+BUILD_ID="6"
+JOB_NAME="EasyTravel Deployment"
+NODE_LABELS="master"
+WORKSPACE="/var/lib/jenkins/workspace/EasyTravel Deployment"
+JENKINS_URL="http://52.25.18.37:8080/"
+BUILD_TAG="jenkins-EasyTravel Deployment-6"
+EXECUTOR_NUMBER="1"
+JOB_BASE_NAME="EasyTravel Deployment"
+JENKINS_HOME="/var/lib/jenkins"
+BUILD_NUMBER="6"
+NODE_NAME="master"
+BUILD_DISPLAY_NAME="#6"
+BUILD_URL="http://52.25.18.37:8080/job/EasyTravel%20Deployment/6/"
+HOME="/var/lib/jenkins"
+
+ls -l
+echo "BUILD_NUMBER" :: $BUILD_NUMBER
+echo "BUILD_ID" :: $BUILD_ID
+echo "BUILD_DISPLAY_NAME" :: $BUILD_DISPLAY_NAME
+echo "JOB_NAME" :: $JOB_NAME
+echo "JOB_BASE_NAME" :: $JOB_BASE_NAME
+echo "BUILD_TAG" :: $BUILD_TAG
+echo "EXECUTOR_NUMBER" :: $EXECUTOR_NUMBER
+echo "NODE_NAME" :: $NODE_NAME
+echo "NODE_LABELS" :: $NODE_LABELS
+echo "WORKSPACE" :: $WORKSPACE
+echo "JENKINS_HOME" :: $JENKINS_HOME
+echo "JENKINS_URL" :: $JENKINS_URL
+echo "BUILD_URL" ::$BUILD_URL
+echo "JOB_URL" :: $JOB_URL
+echo "EasyTravelHOST" :: $EasyTravelHOST
+
+[SSH] executing...
+bash: -c: line 0: unexpected EOF while looking for matching ``'
+bash: -c: line 1: syntax error: unexpected end of file
+
+[SSH] completed
+[SSH] exit-status: 1
+
+Build step 'Execute shell script on remote host using ssh' marked build as failure
+Finished: FAILURE

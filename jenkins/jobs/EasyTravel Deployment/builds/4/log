@@ -1,0 +1,20 @@
+Started by user [8mha:////4Oh1KoZAjZVRdvBsUuACbEAxcemgBgNTIjtrCCOIUj0+AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZu/dLi1CL9xJTczDwA+rnvwMAAAAA=[0mNathan Kunz
+Building in workspace /var/lib/jenkins/workspace/EasyTravel Deployment
+[EasyTravel Deployment] $ /bin/sh -xe /tmp/jenkins3714693279975922752.sh
++ curl http://52.32.106.158:8094/services/ConfigurationService/getEnabledPluginNames
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   441    0   441    0     0   430k      0 --:--:-- --:--:-- --:--:--  430k
+<ns:getEnabledPluginNamesResponse xmlns:ns="http://webservice.business.easytravel.dynatrace.com"><ns:return>DatabaseCleanup</ns:return><ns:return>DummyNativeApplication.NET</ns:return><ns:return>DummyPaymentService</ns:return><ns:return>SocketNativeApplication</ns:return><ns:return>ThirdPartyAdvertisements</ns:return><ns:return>ThirdPartyContent</ns:return><ns:return>UseFinanceServiceWCF.NET</ns:return></ns:getEnabledPluginNamesResponse>[SSH] commands:
+
+ls -l
+
+[SSH] executing...
+total 8
+drwxr-xr-x 6 root root 4096 Dec 16 03:37 Dynatrace
+drwxr-xr-x 3 root root 4096 Dec  3 22:48 snap
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

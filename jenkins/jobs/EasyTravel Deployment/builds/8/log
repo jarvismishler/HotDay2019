@@ -1,0 +1,12 @@
+Started by user [8mha:////4Oh1KoZAjZVRdvBsUuACbEAxcemgBgNTIjtrCCOIUj0+AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZu/dLi1CL9xJTczDwA+rnvwMAAAAA=[0mNathan Kunz
+Building in workspace /var/lib/jenkins/workspace/EasyTravel Deployment
+[EasyTravel Deployment] $ /bin/sh -xe /tmp/jenkins6274391888331609894.sh
++ curl http:// :: 52.32.106.158 /services/ConfigurationService/getEnabledPluginNames
+curl: (3) Bad URL
+curl: (3) Bad URL, colon is first character
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (7) Failed to connect to 52.32.106.158 port 80: Connection refused
+curl: (3) <url> malformed
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
