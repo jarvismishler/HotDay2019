@@ -24,12 +24,12 @@ then
         rm /opt/dynatrace-easytravel-linux-x86_64.jar
 fi
 
-if [ $(dpkg-query -W -f='${Status}' openjdk-8-jre-headless 2>/dev/null | grep -c "ok installed") -eq 1 ];
+if [ $(dpkg-query -W -f='${Status}' default-jre 2>/dev/null | grep -c "ok installed") -eq 1 ];
 then
   sleep 1s
   echo "."
-  echo "Removingopenjdk-8-jre-headless"
-  apt-get remove openjdk-8-jre-headless -y;
+  echo "Removing default-jre"
+  apt-get remove default-jre -y;
 fi
 
 /opt/dynatrace/oneagent/agent
