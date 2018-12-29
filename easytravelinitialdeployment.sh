@@ -49,8 +49,8 @@ fi
 
 # Download and install Easytravel
 cd /opt
-wget https://s3.amazonaws.com/easytravel/dT72/dynatrace-easytravel-linux-x86_64-2.0.0.3025.jar
-java -jar dynatrace-easytravel-linux-x86_64-2.0.0.3025.jar -y
+wget http://dexya6d9gs5s.cloudfront.net/latest/dynatrace-easytravel-linux-x86_64.jar
+java -jar dynatrace-easytravel-linux-x86_64.jar -y
 
 #Configure easytravel to work with Dynatrace and configure BackEnd Ports
 cd /opt/easytravel-2.0.0-x64/resources
