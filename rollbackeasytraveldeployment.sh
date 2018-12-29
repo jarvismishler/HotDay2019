@@ -9,6 +9,7 @@ if [ -d "/opt/easytravel-2.0.0-x64" ]; then
         pkill -f CommandlineLauncher
         sleep 20s
         rm -fr /opt/easytravel-2.0.0-x64
+	rm -fr "/root/.dynaTrace/easyTravel 2.0.0"
 fi
 
 if [ -f "/var/spool/cron/crontabs/root" ]
