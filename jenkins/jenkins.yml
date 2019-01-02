@@ -3,7 +3,7 @@ version: '3.1'
 services:
  
   main:
-    image: dynanate/jenkins:4
+    image: dynanate/jenkins:5
     ports:
       - 8080:8080
       - 50000:50000
