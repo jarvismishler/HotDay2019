@@ -66,7 +66,7 @@ sed -i 's/config.backendPort=8091/config.backendPort=8094/' easyTravelConfig.pro
 #sed -i 's/config.thirdpartyJavaopts=-Xmx32m/config.thirdpartyJavaopts=-Xmx32m,-DT_CUSTOM_PROP=Application=EasyTravel TIER=ThirdParty/' easyTravelConfig.properties
 ##Dynatrace Application Metadata Environment Arguments
 sed -i '1iconfig.frontendEnvArgs=DT_CUSTOM_PROP=DEPLOYMENT_ID=123 DEPLOYMENT_GROUP_NAME=Production APPLICATION_NAME=easyTravel SERVICE_NAME=CustomerFrontend APPLICATION_TIER=Java_Frontend' easyTravelConfig.properties
-sed -i '1icconfig.backendEnvArgs=DT_CUSTOM_PROP=DEPLOYMENT_ID=123 DEPLOYMENT_GROUP_NAME=Production APPLICATION_NAME=easyTravel SERVICE_NAME=BusinessBackend APPLICATION_TIER=Java_Backend'  easyTravelConfig.properties
+sed -i '1iconfig.backendEnvArgs=DT_CUSTOM_PROP=DEPLOYMENT_ID=123 DEPLOYMENT_GROUP_NAME=Production APPLICATION_NAME=easyTravel SERVICE_NAME=BusinessBackend APPLICATION_TIER=Java_Backend'  easyTravelConfig.properties
 sed -i '1iconfig.apacheWebServerEnvArgs=DT_CUSTOM_PROP=DEPLOYMENT_ID=123 DEPLOYMENT_GROUP_NAME=Production APPLICATION_NAME=easyTravel SERVICE_NAME=ApacheWebServer APPLICATION_TIER=WebServerFrontend' easyTravelConfig.properties
 
 
