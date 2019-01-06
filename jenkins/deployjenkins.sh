@@ -59,3 +59,8 @@ echo "."
 echo "admin" | docker secret create jenkins-user -
 echo "admin" | docker secret create jenkins-pass -
 docker stack deploy -c jenkins.yml jenkins
+
+# Deploy elasticsearch-kibana as Docker Image
+docker pull nshou/elasticsearch-kibana
+docker run -d -p 9091:9200 -p 9094:5601 nshou/elasticsearch-kibana
+
