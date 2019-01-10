@@ -44,12 +44,12 @@ fi
 if [ -f "/opt/dynatrace-easytravel-linux-x86_64.jar" ]
 then
         echo "EasyTravel install file found... removing..."
-        rm /opt/dynatrace-easytravel-linux-x86_64.jar
+        #rm /opt/dynatrace-easytravel-linux-x86_64.jar
 fi
 
 # Download and install Easytravel
 cd /opt
-wget http://dexya6d9gs5s.cloudfront.net/latest/dynatrace-easytravel-linux-x86_64.jar
+#wget http://dexya6d9gs5s.cloudfront.net/latest/dynatrace-easytravel-linux-x86_64.jar
 java -jar dynatrace-easytravel-linux-x86_64.jar -y
 
 #Configure easytravel to work with Dynatrace and configure BackEnd Ports

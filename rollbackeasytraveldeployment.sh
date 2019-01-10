@@ -22,7 +22,7 @@ fi
 if [ -f "/opt/dynatrace-easytravel-linux-x86_64.jar" ]
 then
         echo "EasyTravel install file found... removing..."
-        rm /opt/dynatrace-easytravel-linux-x86_64.jar
+        #rm /opt/dynatrace-easytravel-linux-x86_64.jar
 fi
 
 if [ $(dpkg-query -W -f='${Status}' default-jre 2>/dev/null | grep -c "ok installed") -eq 1 ];
@@ -30,7 +30,7 @@ then
   sleep 1s
   echo "."
   echo "Removing default-jre"
-  apt-get remove default-jre -y;
+  #apt-get remove default-jre -y;
 fi
 
 /opt/dynatrace/oneagent/agent
