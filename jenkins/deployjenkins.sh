@@ -47,7 +47,7 @@ then
   sudo apt-get install -y docker-ce
   docker swarm init
 fi
-
+docker swarm init
 sleep 1s
 echo "."
 sleep 1s
@@ -56,9 +56,9 @@ sleep 1s
 echo "."
 
 # Install Jenkins as Docker
-echo "admin" | docker secret create jenkins-user -
-echo "admin" | docker secret create jenkins-pass -
-docker stack deploy -c jenkins.yml jenkins
+#echo "admin" | docker secret create jenkins-user -
+#echo "admin" | docker secret create jenkins-pass -
+#docker stack deploy -c jenkins.yml jenkins
 
 # Deploy elasticsearch-kibana as Docker Image
 #docker pull nshou/elasticsearch-kibana
