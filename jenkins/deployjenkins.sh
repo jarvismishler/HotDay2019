@@ -65,14 +65,14 @@ docker stack deploy -c jenkins.yml jenkins
 #docker run -d -p 9091:9200 -p 9094:5601 nshou/elasticsearch-kibana
 # run Basic Auth Elasticsearch(user: 'elastic', pw 'secret') daemon
 # in auto-remove mode, start takes 20+ seconds
-docker pull dynanate/elasticsearch:6.5.4
-docker pull dynanate/kibana:6.5.4
+docker pull dynanate/elasticsearch:6.4.2.3
+docker pull dynanate/kibana:6.4.2.3
 
-docker run -d --rm -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "transport.host=127.0.0.1" -e ELASTIC_PASSWORD=secret --name elastic dynanate/elasticsearch:6.5.4 && sleep 20
+docker run -d --rm -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "transport.host=127.0.0.1" -e ELASTIC_PASSWORD=secret --name elastic dynanate/elasticsearch:6.4.2.3 && sleep 20
 
 # run Kibana daemon in auto-remove mode
 # start takes 20+ seconds
-docker run -d --rm --link elastic:elastic-url -e "ELASTICSEARCH_URL=http://elastic-url:9200" -e ELASTICSEARCH_PASSWORD="secret"  -p 5601:5601 --name kibana dynanate/kibana:6.5.4 && sleep 20
+docker run -d --rm --link elastic:elastic-url -e "ELASTICSEARCH_URL=http://elastic-url:9200" -e ELASTICSEARCH_PASSWORD="secret"  -p 5601:5601 --name kibana dynanate/kibana:6.4.2.3 && sleep 20
 
 # check connection to Elasticsearch (JSON is returned)
 #curl "http://localhost:9200/_count" -u 'elastic:secret'
