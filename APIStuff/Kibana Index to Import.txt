@@ -1,0 +1,300 @@
+PUT _template/usersession_per_index
+{
+    "template" : "usersession*",
+    "mappings" : {
+      "usersession.export" : {
+      "dynamic_templates": [
+        {
+          "num_fields": {
+            "path_match": "numTags.*",
+            "mapping": {
+              "norms": "false",
+              "type": "double"
+            }
+          }
+        },
+        {
+          "date_fields": {
+            "path_match": "dateTags.*",
+            "mapping": {
+              "norms": "false",
+              "type": "date"
+            }
+          }
+        },
+        {
+          "string_fields": {
+            "match": "*",
+            "match_mapping_type": "string",
+            "mapping": {
+              "norms": "false",
+              "type": "keyword"
+            }
+          }
+        }
+      ],
+      "properties": {
+        "applicationType": {
+          "type": "keyword"
+        },
+        "bounce": {
+          "type": "boolean"
+        },
+        "browserFamily": {
+          "type": "keyword"
+        },
+        "browserMajorVersion": {
+          "type": "keyword"
+        },
+        "browserMonitorId": {
+          "type": "keyword"
+        },
+        "browserMonitorName": {
+          "type": "keyword"
+        },
+        "browserType": {
+          "type": "keyword"
+        },
+        "city": {
+          "type": "keyword"
+        },
+        "clientType": {
+          "type": "keyword"
+        },
+        "continent": {
+          "type": "keyword"
+        },
+        "country": {
+          "type": "keyword"
+        },
+        "dateProperties": {
+          "type": "object"
+        },
+        "dateTags": {
+          "type": "object"
+        },
+        "displayResolution": {
+          "type": "keyword"
+        },
+        "duration": {
+          "type": "integer"
+        },
+        "endReason": {
+          "type": "keyword"
+        },
+        "endTime": {
+          "type": "date"
+        },
+        "errors": {
+          "properties": {
+            "application": {
+              "type": "keyword"
+            },
+            "internalApplicationId": {
+              "type": "keyword"
+            },
+            "name": {
+              "type": "keyword"
+            },
+            "startTime": {
+              "type": "long"
+            },
+            "type": {
+              "type": "keyword"
+            }
+          }
+        },
+        "events": {
+          "type": "nested",
+          "properties": {
+            "application": {
+              "type": "keyword"
+            },
+            "internalApplicationId": {
+              "type": "keyword"
+            },
+            "name": {
+              "type": "keyword"
+            },
+            "startTime": {
+              "type": "date"
+            },
+            "type": {
+              "type": "keyword"
+            }
+          }
+        },
+        "internalUserId": {
+          "type": "keyword"
+        },
+        "ip": {
+          "type": "ip"
+        },
+        "isp": {
+          "type": "text"
+        },
+        "newUser": {
+          "type": "boolean"
+        },
+        "numProperties": {
+          "type": "object"
+        },
+        "numTags": {
+          "type": "object"
+        },
+        "osFamily": {
+          "type": "keyword"
+        },
+        "osVersion": {
+          "type": "keyword"
+        },
+        "region": {
+          "type": "keyword"
+        },
+        "screenHeight": {
+          "type": "integer"
+        },
+        "screenOrientation": {
+          "type": "keyword"
+        },
+        "screenWidth": {
+          "type": "integer"
+        },
+        "startTime": {
+          "type": "date"
+        },
+        "stringProperties": {
+          "type": "object"
+        },
+        "stringTags": {
+          "type": "object"
+        },
+        "tenantId": {
+          "type": "keyword"
+        },
+        "totalErrorCount": {
+          "type": "integer"
+        },
+        "userActionCount": {
+          "type": "integer"
+        },
+        "userActions": {
+          "type": "nested",
+          "properties": {
+            "apdexCategory": {
+              "type": "keyword"
+            },
+            "application": {
+              "type": "keyword"
+            },
+            "cdnBusyTime": {
+              "type": "long"
+            },
+            "cdnResources": {
+              "type": "integer"
+            },
+            "documentInteractiveTime": {
+              "type": "integer"
+            },
+            "domCompleteTime": {
+              "type": "long"
+            },
+            "domContentLoadedTime": {
+              "type": "long"
+            },
+            "domain": {
+              "type": "keyword"
+            },
+            "duration": {
+              "type": "integer"
+            },
+            "endTime": {
+              "type": "date"
+            },
+            "errorCount": {
+              "type": "integer"
+            },
+            "failedImages": {
+              "type": "integer"
+            },
+            "failedXhrRequests": {
+              "type": "integer"
+            },
+            "firstPartyBusyTime": {
+              "type": "integer"
+            },
+            "firstPartyResources": {
+              "type": "integer"
+            },
+            "frontendTime": {
+              "type": "integer"
+            },
+            "httpRequestsWithErrors": {
+              "type": "integer"
+            },
+            "internalApplicationId": {
+              "type": "keyword"
+            },
+            "loadEventEnd": {
+              "type": "double"
+            },
+            "loadEventStart": {
+              "type": "double"
+            },
+            "name": {
+              "type": "keyword"
+            },
+            "navigationStart": {
+              "type": "long"
+            },
+            "networkTime": {
+              "type": "integer"
+            },
+            "requestStart": {
+              "type": "long"
+            },
+            "responseEnd": {
+              "type": "long"
+            },
+            "responseStart": {
+              "type": "long"
+            },
+            "serverTime": {
+              "type": "integer"
+            },
+            "speedIndex": {
+              "type": "long"
+            },
+            "startTime": {
+              "type": "date"
+            },
+            "targetUrl": {
+              "type": "keyword"
+            },
+            "thirdPartyBusyTime": {
+              "type": "integer"
+            },
+            "thirdPartyResources": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "keyword"
+            },
+            "visuallyCompleteTime": {
+              "type": "long"
+            }
+          }
+        },
+        "userId": {
+          "type": "keyword"
+        },
+        "userSessionId": {
+          "type": "keyword"
+        },
+        "userType": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
