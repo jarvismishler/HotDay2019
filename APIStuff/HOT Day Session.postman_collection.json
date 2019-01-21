@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "b49f4bb6-b6d2-4f1b-960a-a759f805b1ac",
+		"name": "HOT Day Session",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Return Conversion Rate",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Token {{APIToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Tenant}}/api/v1/timeseries?timeseriesId=com.dynatrace.builtin:app.conversionrate&relativeTime=month&entity=APPLICATION-4462DAA0020F7410&aggregationType=AVE",
+					"host": [
+						"{{Tenant}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"timeseries"
+					],
+					"query": [
+						{
+							"key": "timeseriesId",
+							"value": "com.dynatrace.builtin:app.conversionrate"
+						},
+						{
+							"key": "relativeTime",
+							"value": "month"
+						},
+						{
+							"key": "entity",
+							"value": "APPLICATION-4462DAA0020F7410"
+						},
+						{
+							"key": "aggregationType",
+							"value": "AVE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Apdex",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Token OjfNj8UoSqSJtWxJarCD3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Tenant}}/api/v1/timeseries?timeseriesId=com.dynatrace.builtin:app.apdex&relativeTime=month&entity=APPLICATION-4462DAA0020F7410&aggregationType=COUNT",
+					"host": [
+						"{{Tenant}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"timeseries"
+					],
+					"query": [
+						{
+							"key": "timeseriesId",
+							"value": "com.dynatrace.builtin:app.apdex"
+						},
+						{
+							"key": "relativeTime",
+							"value": "month"
+						},
+						{
+							"key": "entity",
+							"value": "APPLICATION-4462DAA0020F7410"
+						},
+						{
+							"key": "aggregationType",
+							"value": "COUNT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Web Application Time Series Metrics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Token {{APIToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Tenant}}/api/v1/timeseries?source=BUILTIN&detailedSource=Web%20application",
+					"host": [
+						"{{Tenant}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"timeseries"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "BUILTIN"
+						},
+						{
+							"key": "detailedSource",
+							"value": "Web%20application"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return List of Applications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Token {{APIToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Tenant}}/api/v1/entity/applications",
+					"host": [
+						"{{Tenant}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"entity",
+						"applications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USQL - Return Booking Amount over Time",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USQL - Get all Session from last 2 Hours",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Token OjfNj8UoSqSJtWxJarCD3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://naz40386.sprint.dynatracelabs.com/api/v1/userSessionQueryLanguage/tree?query=select%20(startTime)%2C%20(userId)%2C%20AVG(useraction.duration)%20FROM%20usersession%20GROUP%20BY%20(startTime)%2C%20(userID)%20ORDER%20BY%20(starttime)%20ASC",
+					"protocol": "https",
+					"host": [
+						"naz40386",
+						"sprint",
+						"dynatracelabs",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"userSessionQueryLanguage",
+						"tree"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "select%20(startTime)%2C%20(userId)%2C%20AVG(useraction.duration)%20FROM%20usersession%20GROUP%20BY%20(startTime)%2C%20(userID)%20ORDER%20BY%20(starttime)%20ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://demo.dev.dynatracelabs.com/api/v1/timeseries/com.dynatrace.builtin%3Asyntheticmonitor.availability.percent?includeData=true&relativeTime=30mins&entity=SYNTHETIC_TEST-0000000000008AAD&Api-Token=WQ_ORT8JRDareiFhs1cqU",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Token {{APIToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Tenent}}/api/v1/timeseries/com.dynatrace.builtin%3Asyntheticmonitor.availability.percent?includeData=true&relativeTime=30mins&entity=SYNTHETIC_TEST-0000000000008AAD",
+					"host": [
+						"{{Tenent}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"timeseries",
+						"com.dynatrace.builtin%3Asyntheticmonitor.availability.percent"
+					],
+					"query": [
+						{
+							"key": "includeData",
+							"value": "true"
+						},
+						{
+							"key": "relativeTime",
+							"value": "30mins"
+						},
+						{
+							"key": "entity",
+							"value": "SYNTHETIC_TEST-0000000000008AAD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "542693ba-1f2b-4003-808c-96ddf7d14ec7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d88b0f4c-03f8-4ab9-bed6-e4115bf1256a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "916e85cf-19c1-4c24-badf-876f051f4e75",
+			"key": "APIToken",
+			"value": "OjfNj8UoSqSJtWxJarCD3",
+			"type": "string"
+		},
+		{
+			"id": "9a19218a-381b-4454-84dc-8d7d8249951b",
+			"key": "Tenant",
+			"value": "https://naz40386.sprint.dynatracelabs.com",
+			"type": "string"
+		}
+	]
+}
