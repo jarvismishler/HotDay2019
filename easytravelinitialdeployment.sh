@@ -72,7 +72,7 @@ sed -i '1i#Setting EasyTravel Environment Varibles' easyTravelConfig.properties
 
 #Add a 1 minute to the startup of EasyTravel
 cd /opt/easytravel-2.0.0-x64
-sed -i '6a sleep 1m' runEasyTravelNoGUI.sh
+#sed -i '6a sleep 1m' runEasyTravelNoGUI.sh
 
 #Modigy crontab to start EasyTravel at boot
 (crontab -l ; echo "@reboot nohup /opt/easytravel-2.0.0-x64/runEasyTravelNoGUI.sh") | crontab -
