@@ -1,8 +1,8 @@
-ApiToken: <YOUR APITOKEN>
-dtTenant: <YOUR TENENT URL>
-EasyTravelHOST: <YOUR EASYTRAVEL HOST IP>
-InstallToken: <YOUR INSTALLER TOKEN>
-Jenkins URL: http://<YOUR JENKINS HOST IP>:8080
+﻿ApiToken: 
+dtTenant: 
+EasyTravelHOST: 
+InstallToken: 
+Jenkins URL: 
 
 CLONE CLASS MATERIALS FROM GITHUB
 https://github.com/kunzna/HotDay2019/
@@ -10,7 +10,6 @@ https://github.com/kunzna/HotDay2019/
 DEPLOY JENKINS AS DOCKER
 cd /opt
 git clone https://github.com/kunzna/HotDay2019.git
-
 cd /opt/HotDay2019/jenkins/
 ./deployjenkins.sh
 docker ps
@@ -176,7 +175,7 @@ CREATE CUSTOM EVENTS WITH REST API
         "tags": [
           {
             "context": "CONTEXTLESS",
-            "key": "easyTravel"
+            "key": "easytravel"
           }
         ]
       }
